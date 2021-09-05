@@ -2,31 +2,21 @@
 %define pypi_name QtAwesome
 
 Name:           python-%{module}
-Version:        1.0.2
+Version:        1.0.3
 Release:        %mkrel 2
-Summary:        Iconic fonts in PyQt and PySide applications (Python 2)
+Summary:        Iconic fonts in PyQt and PySide applications
 Group:          Development/Python
 License:        MIT and OFL
 URL:            https://github.com/spyder-ide/qtawesome
 Source0:        https://github.com/spyder-ide/%{module}/archive/v%{version}/%{module}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  pkgconfig(python3)
+BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 
-%description
-QtAwesome enables iconic fonts such as Font Awesome and Elusive
-Icons in PyQt and PySide applications.
-
-#----------------------------------------------------
-
-%package -n     python3-%{module}
-Summary:        Iconic fonts in PyQt and PySide applications (Python 3)
-Group:          Development/Python
-BuildArch:      noarch
 %{?python_provide:%python_provide python3-%{module}}
 
-%description -n python3-%{module}
+%description
 QtAwesome enables iconic fonts such as Font Awesome and Elusive
 Icons in PyQt and PySide applications.
 
@@ -36,14 +26,14 @@ Icons in PyQt and PySide applications.
 %autosetup -n %{module}-%{version}
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
-%files -n python3-%{module}
+%files
 %doc CHANGELOG.md README.md
 %license LICENSE.txt
 %{_bindir}/qta-browser
-%{python3_sitelib}/%{module}/
-%{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
+%{python_sitelib}/%{module}/
+%{python_sitelib}/%{pypi_name}-%{version}-py%{python_version}.egg-info
