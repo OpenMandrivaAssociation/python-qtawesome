@@ -3,7 +3,7 @@
 
 Name:           python-%{module}
 Version:        1.0.3
-Release:        %mkrel 2
+Release:        1
 Summary:        Iconic fonts in PyQt and PySide applications
 Group:          Development/Python
 License:        MIT and OFL
