@@ -2,7 +2,7 @@
 %define pypi_name QtAwesome
 
 Name:           python-%{module}
-Version:        1.3.0
+Version:        1.3.1
 Release:        1
 Summary:        Iconic fonts in PyQt and PySide applications
 Group:          Development/Python
