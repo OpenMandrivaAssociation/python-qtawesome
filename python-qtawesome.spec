@@ -37,5 +37,6 @@ Icons in PyQt and PySide applications.
 %doc CHANGELOG.md README.md
 %license LICENSE.txt
 %{_bindir}/qta-browser
+%{_bindir}/qta-install-fonts-all-users
 %{python_sitelib}/%{module}/
 %{python_sitelib}/%{pypi_name}-%{version}-py%{python_version}.egg-info
